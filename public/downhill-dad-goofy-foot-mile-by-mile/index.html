@@ -9,7 +9,7 @@
     <title>Downhill Dad &amp; Goofy Foot: Front Royal to Harpers Ferry</title>
     <meta
       name="description"
-      content="A missed train, a drive east, and six days on the Appalachian Trail from Front Royal to Harpers Ferry, as my 74-year-old dad passed 1,000 AT miles."
+      content="A missed train, a drive east, and 52.9 trail miles on the Appalachian Trail from Front Royal to Harpers Ferry, as my 74-year-old dad passed 1,000 AT miles."
     />
     <meta
       name="keywords"
@@ -23,14 +23,14 @@
     <meta property="og:title" content="Downhill Dad &amp; Goofy Foot, Mile by Mile" />
     <meta
       property="og:description"
-      content="Six days, a missed train, and my dad's 1,000th Appalachian Trail mile. Front Royal → Harpers Ferry, Sep 27 – Oct 2, 2026."
+      content="Six days, 52.9 trail miles, and my dad's 1,000th Appalachian Trail mile. Front Royal → Harpers Ferry, Sep 27 – Oct 2, 2026."
     />
     <!-- DRAFT: add og:image (1200×630) and twitter:image at publish, once a hero photo exists. Do not add this URL to a sitemap until then. -->
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="Downhill Dad &amp; Goofy Foot, Mile by Mile" />
     <meta
       name="twitter:description"
-      content="Six days, a missed train, and my dad's 1,000th Appalachian Trail mile. Front Royal → Harpers Ferry, Sep 27 – Oct 2, 2026."
+      content="Six days, 52.9 trail miles, and my dad's 1,000th Appalachian Trail mile. Front Royal → Harpers Ferry, Sep 27 – Oct 2, 2026."
     />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -44,7 +44,7 @@
         "@context": "https://schema.org",
         "@type": "Article",
         "headline": "Downhill Dad & Goofy Foot, Mile by Mile",
-        "description": "A missed train, a drive east, and six days on the Appalachian Trail from Front Royal to Harpers Ferry, as my 74-year-old dad passed 1,000 AT miles.",
+        "description": "A missed train, a drive east, and 52.9 trail miles on the Appalachian Trail from Front Royal to Harpers Ferry, as my 74-year-old dad passed 1,000 AT miles.",
         "inLanguage": "en",
         "isAccessibleForFree": true,
         "creativeWorkStatus": "Draft",
@@ -298,6 +298,62 @@
         margin-top: 0.2rem;
       }
 
+      .mileage {
+        display: grid;
+        gap: 0.7rem;
+        margin: 0 0 0.85rem;
+      }
+
+      @media (min-width: 640px) {
+        .mileage {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      .mileage-figure {
+        margin: 0;
+        padding: 0.85rem 0.95rem;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+      }
+
+      .mileage-label {
+        display: block;
+        color: var(--lime);
+        font-size: 0.75rem;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .mileage-value {
+        display: block;
+        margin-top: 0.2rem;
+        font-family: Fraunces, Georgia, serif;
+        font-size: clamp(1.8rem, 4vw, 2.15rem);
+        font-weight: 520;
+        letter-spacing: -0.03em;
+        line-height: 1.05;
+      }
+
+      .mileage-value span {
+        font-family: Outfit, ui-sans-serif, system-ui, sans-serif;
+        font-size: 0.95rem;
+        font-weight: 500;
+        color: var(--muted);
+      }
+
+      .photo-grid {
+        display: grid;
+        gap: 0.75rem;
+      }
+
+      @media (min-width: 700px) {
+        .photo-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
       .start {
         display: inline-flex;
         align-items: center;
@@ -385,6 +441,22 @@
         font-weight: 520;
         letter-spacing: -0.03em;
         line-height: 1.15;
+      }
+
+      h3 {
+        margin: 1.5rem 0 0.55rem;
+        font-family: Fraunces, Georgia, serif;
+        font-size: 1.35rem;
+        font-weight: 520;
+        letter-spacing: -0.02em;
+      }
+
+      tbody th[scope="row"] {
+        color: var(--text);
+        font-size: inherit;
+        font-weight: 600;
+        letter-spacing: 0;
+        text-transform: none;
       }
 
       p {
@@ -655,8 +727,17 @@
               <div>
                 <dt>Distance</dt>
                 <dd>
-                  52.9 miles, Downhill's official AT mileage for this section (the sum of his six daily logs). My own Strava track came in at over 54 miles.
-                  <span class="needs-kyle">[NEEDS KYLE: exact Strava total]</span>
+                  <div class="mileage">
+                    <p class="mileage-figure">
+                      <span class="mileage-label">Miles hiked (Strava)</span>
+                      <span class="mileage-value">65.46 <span>mi</span></span>
+                    </p>
+                    <p class="mileage-figure">
+                      <span class="mileage-label">Official trail miles</span>
+                      <span class="mileage-value">52.9 <span>mi</span></span>
+                    </p>
+                  </div>
+                  The 52.9 is Downhill's official AT mileage, the sum of his six daily logs. My Strava total is the miles we actually hiked, including the hikes to camp and my backtrack on Day 3. Strava elevation gain: about 16,979 ft.
                 </dd>
               </div>
               <div>
@@ -714,6 +795,7 @@
               <li><a href="#scene-07-day4">Day 4: The rock mansion, a brewery detour, and a night on the Roller Coaster</a></li>
               <li><a href="#scene-08-day5">Day 5: Trail Magic at Blackburn</a></li>
               <li><a href="#scene-09-day6">Day 6: The hot final push into Harpers Ferry</a></li>
+              <li><a href="#scene-09b-dc">Bonus day: Washington, DC (Sat Oct 3)</a></li>
               <li><a href="#scene-10-numbers">By the numbers</a></li>
               <li><a href="#scene-11-reflection">Closing reflection</a></li>
               <li><a href="#scene-12-credits">Credits, sources &amp; CTA</a></li>
@@ -832,7 +914,8 @@
           <section id="scene-04-day1" aria-labelledby="day1-heading">
             <h2 id="day1-heading">Day 1: An early push past Denton Shelter</h2>
             <p class="scene-meta">Sun Sep 27 · Section miles 0 → 10.7 · Cumulative AT 984.8 at day end</p>
-            <p class="day-card">Day card: 10.7 mi · 7.75 hr · 1.38 mph avg</p>
+            <p class="day-card">Day card: Official trail miles: 10.7 mi · 7.75 hr · 1.38 mph avg</p>
+            <p class="day-card">Miles hiked (Strava): 11.02 mi · 3,110 ft · <span class="needs-kyle">[NEEDS KYLE: OK to show these links publicly?]</span></p>
             <p>
               Day 1 was about momentum. We made an early push past Denton Shelter
               <span class="verify">[VERIFY: exact shelter mile pending Data Sheets 3–4]</span>
@@ -867,7 +950,8 @@
           <section id="scene-05-day2" aria-labelledby="day2-heading">
             <h2 id="day2-heading">Day 2: The long one</h2>
             <p class="scene-meta">Mon Sep 28 · Section miles 10.7 → 23.6 · Cumulative AT 997.7 at day end</p>
-            <p class="day-card">Day card: 12.9 mi · 10.50 hr · 1.23 mph avg</p>
+            <p class="day-card">Day card: Official trail miles: 12.9 mi · 10.50 hr · 1.23 mph avg</p>
+            <p class="day-card">Miles hiked (Strava): 14.35 mi (two activities: 6.01 + 8.34) · 1,106 + 2,331 ft · <span class="needs-kyle">[NEEDS KYLE: OK to show these links publicly?]</span></p>
             <p>Day 2 was the longest of the trip: 12.9 miles over ten and a half hours.</p>
             <p><span class="needs-kyle">[NEEDS KYLE: no story beat for Day 2 has been supplied yet. What happened? Weather, terrain, low points, food, and where you slept.]</span></p>
             <p>
@@ -900,7 +984,8 @@
               <span class="verify">[VERIFY: derived arithmetic, location unconfirmed]</span>
             </p>
             <p class="source">Derived from Downhill's daily totals.</p>
-            <p class="day-card">Day card: 6.9 mi · 8.00 hr · 0.86 mph avg</p>
+            <p class="day-card">Day card: Official trail miles: 6.9 mi · 8.00 hr · 0.86 mph avg</p>
+            <p class="day-card">Miles hiked (Strava): 11.44 mi · 3,961 ft · <span class="needs-kyle">[NEEDS KYLE: OK to show these links publicly?]</span></p>
             <aside class="milestone">
               <p class="milestone-kicker">Milestone</p>
               <p><strong>1,000 AT miles</strong></p>
@@ -917,7 +1002,14 @@
               <span class="needs-kyle">[NEEDS KYLE: what he switched to, and why he stopped iodine. Do NOT add medical claims.]</span>
             </p>
             <p>
-              We covered 6.9 miles that day, and it took eight hours.
+              Day 3 was also the day of the topo cards. When we stopped to take a photo at a bridge
+              <span class="needs-kyle">[NEEDS KYLE: which bridge]</span>, I distracted Downhill, and he put his topo cards in the wrong pocket. He thought he'd lost them. So I ran back to where we had sat and rested, 2.4 miles of backtracking at a run, looking for cards that had been in his other pocket the whole time.
+              <span class="needs-kyle">[NEEDS KYLE: how and when you realized the cards were in the other pocket]</span>
+              <span class="needs-kyle">[NEEDS KYLE: Downhill's reaction or words, verbatim only]</span>
+            </p>
+            <p>That 2.4-mile run is part of why my Strava shows 11.44 miles for Day 3 against 6.9 official trail miles.</p>
+            <p>
+              We covered 6.9 official trail miles that day, and it took eight hours.
               <span class="needs-kyle">[NEEDS KYLE: optional color on why it was a slow day.]</span>
               That night his total stood at 1,004.6.
             </p>
@@ -957,7 +1049,8 @@
           <section id="scene-07-day4" aria-labelledby="day4-heading">
             <h2 id="day4-heading">Day 4: The rock mansion, a brewery detour, and a night on the Roller Coaster</h2>
             <p class="scene-meta">Wed Sep 30 · Section miles 30.5 → 35.0 · Cumulative AT 1,009.1 at day end</p>
-            <p class="day-card">Day card: 4.5 mi · 7.58 hr · 0.59 mph avg</p>
+            <p class="day-card">Day card: Official trail miles: 4.5 mi · 7.58 hr · 0.59 mph avg</p>
+            <p class="day-card">Miles hiked (Strava): 8.19 mi · 2,479 ft · <span class="needs-kyle">[NEEDS KYLE: OK to show these links publicly?]</span></p>
             <p>Day 4 was short on miles and long on story.</p>
             <p>
               First came <strong>Bear Den Lodge</strong>, which we called the "rock mansion."
@@ -1019,7 +1112,8 @@
           <section id="scene-08-day5" aria-labelledby="day5-heading">
             <h2 id="day5-heading">Day 5: Trail Magic at Blackburn</h2>
             <p class="scene-meta">Thu Oct 1 · Section miles 35.0 → 44.6 · Cumulative AT 1,018.7 at day end</p>
-            <p class="day-card">Day card: 9.6 mi · 8.75 hr · 1.10 mph avg</p>
+            <p class="day-card">Day card: Official trail miles: 9.6 mi · 8.75 hr · 1.10 mph avg</p>
+            <p class="day-card">Miles hiked (Strava): 11.18 mi · 2,773 ft · <span class="needs-kyle">[NEEDS KYLE: OK to show these links publicly?]</span></p>
             <p>On Day 5 the trail gave something back. At <strong>Blackburn Trail Center</strong> we found Trail Magic: a 7-Up, applesauce, and an apple.</p>
             <p><span class="needs-kyle">[NEEDS KYLE: the setting. Who left or handed out the Trail Magic (no names without permission), whether it was a cooler or a person, how it felt to get it, and who got the 7-Up.]</span></p>
             <p><span class="needs-kyle">[NEEDS KYLE: rest of Day 5. Terrain, weather, and where you slept.]</span></p>
@@ -1045,7 +1139,8 @@
           <section id="scene-09-day6" aria-labelledby="day6-heading">
             <h2 id="day6-heading">Day 6: The hot final push into Harpers Ferry</h2>
             <p class="scene-meta">Fri Oct 2 · Section miles 44.6 → 52.9 · Cumulative AT ~1,027 at day end</p>
-            <p class="day-card">Day card: 8.3 mi · 5.08 hr · 1.63 mph avg (the fastest pace of the trip)</p>
+            <p class="day-card">Day card: Official trail miles: 8.3 mi · 5.08 hr · 1.63 mph avg (the fastest pace of the trip)</p>
+            <p class="day-card">Miles hiked (Strava): 9.28 mi · 1,219 ft · <span class="needs-kyle">[NEEDS KYLE: OK to show these links publicly?]</span></p>
             <p>The last day was hot, and it was the fastest we walked all week.</p>
             <p><span class="needs-kyle">[NEEDS KYLE: temperature or how the heat felt, the water situation, and the moment you crossed into West Virginia, if you noted it.]</span></p>
             <p>
@@ -1088,13 +1183,97 @@
             </figure>
           </section>
 
+          <section id="scene-09b-dc" aria-labelledby="dc-heading">
+            <h2 id="dc-heading">Bonus day: Washington, DC (Sat Oct 3)</h2>
+            <p class="scene-meta">Sat Oct 3, 2026 · Off-trail</p>
+            <p><span class="needs-kyle">[NEEDS KYLE: confirm. The plan had a stop at the ATC Visitor Center in Harpers Ferry that morning.]</span></p>
+            <p>The day after we finished, we went to Washington, DC. We took a tour of the monuments and memorials on foot, starting a little after noon.</p>
+            <p class="day-card">
+              Walk card: National Mall Tour · 3.54 mi · 1:19 moving · 2:25 elapsed · 268 ft · started 12:05 PM ET · Apple Watch ·
+              <span class="needs-kyle">[NEEDS KYLE: OK to show these links publicly?]</span>
+            </p>
+            <p>Our route took us past, in order:</p>
+            <ul>
+              <li>Vietnam Veterans Memorial (~12:16 PM ET)</li>
+              <li>Lincoln Memorial (~12:29 PM)</li>
+              <li>Korean War Veterans Memorial (~12:39 PM)</li>
+              <li>Martin Luther King Jr. Memorial (~12:48 PM)</li>
+              <li>World War II Memorial (~1:04 PM)</li>
+              <li>Washington Monument (~1:22 PM)</li>
+            </ul>
+            <p>The walk ended near the Watergate around 2:01 PM, and we ate at <strong>Tazza Cafe</strong> at the Watergate.</p>
+            <p>
+              <span class="needs-kyle">[NEEDS KYLE: moments from the walk, and which memorial meant the most]</span>
+              <span class="needs-kyle">[NEEDS KYLE: Downhill's reactions or words, verbatim only]</span>
+              <span class="needs-kyle">[NEEDS KYLE: what you ate at Tazza Cafe, if you want to include it]</span>
+            </p>
+            <p><span class="needs-kyle">[NEEDS KYLE: confirm. The plan had you driving home to Minnesota afterward.]</span></p>
+            <p><span class="needs-kyle">[NEEDS KYLE: send the five Strava photos and a caption for each]</span></p>
+            <div class="photo-grid">
+              <figure class="photo-slot">
+                <div class="photo-box">
+                  <p class="photo-kicker">Photo needed</p>
+                  <p class="photo-file">National Mall Tour photo 1 of 5</p>
+                  <p class="photo-status">On the Strava activity. Not received yet.</p>
+                </div>
+                <figcaption>
+                  <p><span class="cap-label">Caption</span></p>
+                  <p>National Mall Tour, Washington, DC, Sat Oct 3, 2026.</p>
+                </figcaption>
+              </figure>
+              <figure class="photo-slot">
+                <div class="photo-box">
+                  <p class="photo-kicker">Photo needed</p>
+                  <p class="photo-file">National Mall Tour photo 2 of 5</p>
+                  <p class="photo-status">On the Strava activity. Not received yet.</p>
+                </div>
+                <figcaption>
+                  <p><span class="cap-label">Caption</span></p>
+                  <p>National Mall Tour, Washington, DC, Sat Oct 3, 2026.</p>
+                </figcaption>
+              </figure>
+              <figure class="photo-slot">
+                <div class="photo-box">
+                  <p class="photo-kicker">Photo needed</p>
+                  <p class="photo-file">National Mall Tour photo 3 of 5</p>
+                  <p class="photo-status">On the Strava activity. Not received yet.</p>
+                </div>
+                <figcaption>
+                  <p><span class="cap-label">Caption</span></p>
+                  <p>National Mall Tour, Washington, DC, Sat Oct 3, 2026.</p>
+                </figcaption>
+              </figure>
+              <figure class="photo-slot">
+                <div class="photo-box">
+                  <p class="photo-kicker">Photo needed</p>
+                  <p class="photo-file">National Mall Tour photo 4 of 5</p>
+                  <p class="photo-status">On the Strava activity. Not received yet.</p>
+                </div>
+                <figcaption>
+                  <p><span class="cap-label">Caption</span></p>
+                  <p>National Mall Tour, Washington, DC, Sat Oct 3, 2026.</p>
+                </figcaption>
+              </figure>
+              <figure class="photo-slot">
+                <div class="photo-box">
+                  <p class="photo-kicker">Photo needed</p>
+                  <p class="photo-file">National Mall Tour photo 5 of 5</p>
+                  <p class="photo-status">On the Strava activity. Not received yet.</p>
+                </div>
+                <figcaption>
+                  <p><span class="cap-label">Caption</span></p>
+                  <p>National Mall Tour, Washington, DC, Sat Oct 3, 2026.</p>
+                </figcaption>
+              </figure>
+            </div>
+          </section>
+
           <section id="scene-10-numbers" aria-labelledby="numbers-heading">
             <h2 id="numbers-heading">By the numbers</h2>
             <div class="table-scroll" tabindex="0" aria-label="Daily ledger. Scroll sideways for every column.">
               <table>
                 <caption>
-                  Daily distances come from Downhill's handwritten trip recap and add up to 52.9 miles, his official AT mileage for the section. My Strava track came in at over 54 miles. "Lifetime AT miles" is Downhill's running total since 2007.
-                  <span class="needs-kyle">[NEEDS KYLE: exact Strava total]</span>
+                  Official trail miles come from Downhill's handwritten trip recap and add up to 52.9, his official AT mileage for the section. Miles hiked (Strava) is my tracked distance, 65.46 miles, which includes the hikes to camp and my Day 3 backtrack. "Lifetime AT miles" is Downhill's running total since 2007.
                 </caption>
                 <thead>
                   <tr>
@@ -1165,14 +1344,73 @@
                 </tbody>
               </table>
             </div>
+            <h3>Side by side</h3>
+            <div class="table-scroll" tabindex="0" aria-label="Official trail miles beside miles hiked. Scroll sideways for every column.">
+              <table>
+                <caption>Official trail miles beside miles hiked (Strava), with Strava elevation gain.</caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Day</th>
+                    <th scope="col">Official trail miles</th>
+                    <th scope="col">Miles hiked (Strava)</th>
+                    <th scope="col">Strava elevation gain</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>10.7</td>
+                    <td>11.02</td>
+                    <td>3,110 ft</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>12.9</td>
+                    <td>14.35 (6.01 + 8.34)</td>
+                    <td>3,437 ft (1,106 + 2,331)</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>6.9</td>
+                    <td>11.44</td>
+                    <td>3,961 ft</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>4.5</td>
+                    <td>8.19</td>
+                    <td>2,479 ft</td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td>9.6</td>
+                    <td>11.18</td>
+                    <td>2,773 ft</td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td>8.3</td>
+                    <td>9.28</td>
+                    <td>1,219 ft</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Total</th>
+                    <td>52.9</td>
+                    <td>65.46</td>
+                    <td>~16,979 ft</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
             <p>
               <strong>Daily start/end points:</strong>
               only the section start (US Hwy 22 / Mountain Home B&amp;B), the Day 4 camp (a primitive campsite on the Roller Coaster), and the Day 6 finish (Harpers Ferry) are recorded.
               <span class="needs-kyle">[NEEDS KYLE: start and end points for Days 1–6 from the Recap or Data Sheets]</span>
             </p>
             <p>
-              <strong>Strava slot:</strong>
-              <span class="needs-kyle">[NEEDS KYLE: Strava activity links per day, and whether you're OK showing them publicly. Show only telemetry with a clear source.]</span>
+              <strong>Strava links:</strong>
+              Day 1 · Day 2 Part 1 · Day 2 Part 2 · Day 3 · Day 4 · Day 5 · Day 6 · DC walk. GPX files received.
+              <span class="needs-kyle">[NEEDS KYLE: OK to show these links publicly?]</span>
             </p>
             <aside class="editor-note">
               <p>
@@ -1189,7 +1427,7 @@
               <span class="needs-kyle">[NEEDS KYLE: confirm this framing. Is this how you see your dad?]</span>
             </p>
             <p>
-              Six days later we'd walked 52.9 miles from Front Royal to Harpers Ferry, and Downhill had passed a milestone nineteen years in the making: 1,000 miles on the Appalachian Trail.
+              Six days later we'd covered 52.9 official trail miles (65.46 miles hiked, by my Strava) from Front Royal to Harpers Ferry, and Downhill had passed a milestone nineteen years in the making: 1,000 miles on the Appalachian Trail.
               <span class="verify">[VERIFY: "nineteen years" = 2007 → 2026. Confirm you're comfortable with that arithmetic phrasing.]</span>
             </p>
             <p><span class="needs-kyle">[NEEDS KYLE: your real reflection, 2–4 sentences. What did this trip mean to you as his son? What will you remember first? What's next? Is there a next section planned?]</span></p>
